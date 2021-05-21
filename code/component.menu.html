@@ -1,0 +1,32 @@
+<style>
+    md-menu-item .md-button md-icon {
+        margin: 0;
+    }
+</style>
+
+<md-menu-bar>
+
+    <md-menu ng-repeat="item in $ctrl.items">
+
+        <button ng-click="$mdMenu.open($event)">
+            <md-icon ng-if="item.icon" md-font-icon class="{{ item.icon }}"></md-icon>
+            {{ item.displayText }}
+        </button>
+
+        <md-menu-content width="3">
+
+            <md-menu-item ng-repeat="subItem in item.children">
+
+                <md-button ng-click="$ctrl.onMenuItemClick(subItem)">
+                    <md-icon ng-if="subItem.icon" md-font-icon class="{{ subItem.icon }}"></md-icon>
+                    {{ subItem.displayText }}
+                </md-button>
+
+            </md-menu-item>
+
+        </md-menu-content>
+
+    </md-menu>
+
+</md-menu-bar>
+

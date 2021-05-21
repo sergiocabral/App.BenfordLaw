@@ -1,0 +1,42 @@
+{
+    "application_name": {
+        "message": "Benford Inspector"
+    },
+    "application_description": {
+        "message": "Aplicação da Lei de Benford para detecção de desvios em amostragem numérica."
+    },
+
+    "close": {
+        "message": "Fechar"
+    },
+    "loading": {
+        "message": "Carregando"
+    },
+    "yes": {
+        "message": "Sim"
+    },
+    "no": {
+        "message": "Não"
+    },
+    "are_you_sure": {
+        "message": "Tem certeza?"
+    },
+    "there_is_unsaved_data_exit_this_screen_anyway": {
+        "message": "Existem dados não salvos. Sair desta tela mesmo assim?"
+    },
+    "email": {
+        "message": "E-mail"
+    },
+    "make_a_donation_by_sending_bitcoins_to_this_wallet": {
+        "message": "Faça uma doação enviando Bitcoins para esta carteira."
+    },
+    "the_wallet_code_has_been_copied_to_the_clipboard": {
+        "message": "O código da carteira foi copiado para a área de transferência."
+    },
+    "info": {
+        "message": "Info"
+    },
+    "about_the_author": {
+        "message": "Sobre o autor"
+    }
+}

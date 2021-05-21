@@ -1,0 +1,46 @@
+<style>
+    .author-container img {
+        animation: spin-keyframe 60s infinite ease-in-out;
+    }
+
+    .author-container h3 {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    @keyframes spin-keyframe {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    .author-container img {
+        width: 256px;
+        height: 256px;
+        margin: 0 auto 1em;
+    }
+</style>
+
+<div class="author-container" layout="column" ng-cloak>
+
+    <img src="/images/logo-author.png" />
+
+    <md-list>
+        <md-list-item ng-repeat="action in actions" layout="row">
+            <md-icon md-font-icon="{{ action.icon }}" class="md-avatar-icon"></md-icon>
+            <div class="md-list-item-text" layout="column" flex>
+                <h3>{{ helper.simplifyUrl(action.value) }}</h3>
+                <p>{{ action.type | translate }}</p>
+            </div>
+            <md-button class="md-secondary md-icon-button" ng-click="onActionClick(action.type, action.value)">
+                <md-tooltip md-direction="top">{{ 'Access' | translate }}</md-tooltip>
+                <md-icon md-font-icon="fa fa-share"></md-icon>
+            </md-button>
+        </md-list-item>
+    </md-list>
+
+</div>

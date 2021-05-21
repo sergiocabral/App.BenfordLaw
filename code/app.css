@@ -1,0 +1,118 @@
+html,
+body {
+    overflow: hidden;
+}
+
+html,
+html * {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 600px;
+    height: 600px;
+    min-height: 600px;
+    max-height: 600px;
+}
+
+div,
+span,
+p,
+label {
+    cursor: default;
+}
+
+div,
+span,
+p,
+label,
+input {
+    font-size: 15px;
+}
+
+md-icon {
+    text-align: center;
+}
+
+md-toolbar {
+    z-index: 5;
+}
+
+md-toolbar-filler {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+}
+
+md-content {
+    overflow: auto;
+}
+
+md-tooltip {
+    font-size: 0.8em !important;
+}
+
+md-toast .md-toast-text,
+md-toast .md-action {
+    font-size: 0.9em;
+}
+
+.md-toast-success .md-toast-content {
+    background: #00754f !important;
+}
+
+.md-toast-error .md-toast-content {
+    background: rgb(193, 30, 23) !important;
+}
+
+@media (max-width: 959px) {
+    md-toast {
+        left: 10px;
+        width: 70%;
+        bottom: 10px;
+    }
+}
+
+*[bold] {
+    font-weight: bold;
+}
+
+*[style-center-content] {
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+}
+
+*[style-text-shadow] {
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+*[style-box-shadow] {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+*[style-hover-text-shadow] {
+    text-shadow: none;
+    transition: text-shadow 0.3s ease-in-out;
+}
+
+*[style-hover-text-shadow]:hover {
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    transition: text-shadow 0.3s ease-in-out;
+}
+
+*[style-hover-opacity] {
+    opacity: 0.7;
+    transition: opacity 0.3s ease-in-out;
+}
+
+*[style-hover-opacity]:hover {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+*[style-anchor] {
+    cursor: pointer;
+}

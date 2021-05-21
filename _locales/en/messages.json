@@ -1,0 +1,8 @@
+{
+    "application_name": {
+        "message": "Benford Inspector"
+    },
+    "application_description": {
+        "message": "Application of Benford's Law for detecting deviations in numerical sampling."
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "manifest_version": 2,
+    "name": "__MSG_application_name__",
+    "short_name":"app-benford-law",
+    "version": "0.0.1",
+    "description": "__MSG_application_description__",
+    "default_locale": "en",
+    "icons": {
+        "16": "images/0016.png",
+        "32": "images/0032.png",
+        "64": "images/0064.png",
+        "128": "images/0128.png",
+        "256": "images/0256.png",
+        "512": "images/0512.png",
+        "1024": "images/1024.png"
+    },
+    "permissions": [
+        "storage",
+        "*://*"
+    ],
+    "browser_action":{
+        "default_icon":"images/0016.png",
+        "default_popup": "code/app.html"
+    }
+}

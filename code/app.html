@@ -1,0 +1,125 @@
+<html ng-app="mainApplication">
+    <head>
+        <title>{{ 'Application Name' | translate }}</title>
+        <meta charset="UTF-8" />
+        <base href="/">
+
+        <!-- 3rdParty -->
+
+        <link rel="stylesheet" href="/3rdParty/FontAwesome-v4.7.0/css/font-awesome.css">
+        <link rel="stylesheet" href="/3rdParty/AngularJSMaterial-v1.7.2/angular-material.css">
+
+        <script src="/3rdParty/AngularJS-v1.8.2/angular.js"></script>
+        <script src="/3rdParty/AngularJS-v1.8.2/angular-route.js"></script>
+        <script src="/3rdParty/AngularJS-v1.8.2/angular-messages.js"></script>
+        <script src="/3rdParty/AngularJS-v1.8.2/angular-sanitize.js"></script>
+        <script src="/3rdParty/AngularJS-v1.8.2/angular-animate.js"></script>
+        <script src="/3rdParty/AngularJS-v1.8.2/angular-aria.js"></script>
+        <script src="/3rdParty/AngularJSMaterial-v1.7.2/angular-material.js"></script>
+        <script src="/3rdParty/Moment-v2.29.1/moment-with-locales.js"></script>
+
+        <!-- Modelos genéricos -->
+
+        <script src="/code/model.menuItem.js"></script>
+        <script src="/code/model.menu.js"></script>
+        <script src="/code/model.routeItem.js"></script>
+        <script src="/code/model.route.js"></script>
+        <script src="/code/model.environment.js"></script>
+        <script src="/code/model.chromeInfo.js"></script>
+
+        <!-- Modelos customizados da aplicação -->
+
+        <script src="/code/custom/model.jwScheduleInfo.js"></script>
+        <script src="/code/custom/model.term.js"></script>
+        <script src="/code/custom/model.templateMeetingOfTheWeek.js"></script>
+        <script src="/code/custom/initializeModel.environment.js"></script>
+        <script src="/code/custom/initializeModel.menu.js"></script>
+        <script src="/code/custom/initializeModel.route.js"></script>
+
+        <!-- Aplicação genérica AngularJS -->
+
+        <link type="text/css" rel="stylesheet" href="/code/app.css" />
+
+        <script src="/code/app.js"></script>
+        <script src="/code/config.theme.js"></script>
+        <script src="/code/config.locale.js"></script>
+        <script src="/code/config.font.js"></script>
+        <script src="/code/config.routing.js"></script>
+        <script src="/code/constant.helper.js"></script>
+        <script src="/code/constant.environment.js"></script>
+        <script src="/code/factory.log.js"></script>
+        <script src="/code/factory.cache.js"></script>
+        <script src="/code/factory.http.js"></script>
+        <script src="/code/factory.toast.js"></script>
+        <script src="/code/factory.translate.js"></script>
+        <script src="/code/factory.spinner.js"></script>
+        <script src="/code/factory.chrome.js"></script>
+        <script src="/code/factory.storage.js"></script>
+        <script src="/code/factory.menu.js"></script>
+        <script src="/code/factory.route.js"></script>
+        <script src="/code/component.menu.js"></script>
+        <script src="/code/component.spinner.js"></script>
+        <script src="/code/filter.translate.js"></script>
+        <script src="/code/controller.app.js"></script>
+        <script src="/code/controller.author.js"></script>
+
+        <!-- Customização da aplicação AngularJS -->
+
+        <link type="text/css" rel="stylesheet" href="/code/custom/app.css" />
+
+        <script src="/code/custom/app.js"></script>
+        <script src="/code/custom/factory.jw.js"></script>
+        <script src="/code/custom/factory.people.js"></script>
+        <script src="/code/custom/factory.terms.js"></script>
+        <script src="/code/custom/component.header-action.js"></script>
+        <script src="/code/custom/component.select-languages.js"></script>
+        <script src="/code/custom/component.select-schedule.js"></script>
+        <script src="/code/custom/controller.home.js"></script>
+        <script src="/code/custom/controller.edit-board.js"></script>
+        <script src="/code/custom/controller.print-board.js"></script>
+        <script src="/code/custom/controller.edit-people.js"></script>
+        <script src="/code/custom/controller.edit-terms.js"></script>
+        <script src="/code/custom/controller.delete-data.js"></script>
+        <script src="/code/custom/controller.help.js"></script>
+    </head>
+    <body ng-controller="appController" ng-cloak>
+
+        <app-loading loading="loading" progress="progress"></app-loading>
+
+        <div layout="column">
+
+            <md-toolbar class="md-menu-toolbar" style-box-shadow>
+
+                <div layout="row">
+
+                    <md-toolbar-filler>
+                        <md-icon md-font-icon="fa fa-address-card"></md-icon>
+                    </md-toolbar-filler>
+
+                    <div flex>
+
+                        <h1 class="md-toolbar-tools">{{ 'Application Name' | translate }}</h1>
+
+                        <app-menu items="menuItems" on-click="onMenuClick(menuItem)"></app-menu>
+
+                    </div>
+
+                    <div layout="column" style-center-content>
+                        <md-button class="md-icon-button" ng-click="onCloseClick()" style-hover-text-shadow>
+                            <md-tooltip md-direction="left">{{ 'Close' | translate }}</md-tooltip>
+                            <md-icon md-font-icon="fa fa-times"></md-icon>
+                        </md-button>
+                    </div>
+
+                </div>
+
+            </md-toolbar>
+
+            <md-content layout-padding flex ng-style="{ 'height': contentHeight, 'min-height': contentHeight, 'max-height': contentHeight }">
+                <div ng-view></div>
+            </md-content>
+
+        </div>
+
+    </body>
+</html>
